@@ -2,10 +2,7 @@
 
 # React GPT
 
-[![npm Version](https://img.shields.io/npm/v/react-gpt.svg?style=flat-square)](https://www.npmjs.org/package/react-gpt)
-[![Build Status](https://img.shields.io/travis/nfl/react-gpt/master.svg?style=flat-square)](https://travis-ci.org/nfl/react-gpt)
-[![Dependency Status](https://img.shields.io/david/nfl/react-gpt.svg?style=flat-square)](https://david-dm.org/nfl/react-gpt)
-[![codecov.io](https://img.shields.io/codecov/c/github/nfl/react-gpt/master.svg?style=flat-square)](https://codecov.io/github/nfl/react-gpt?branch=master)
+[![npm Version](https://img.shields.io/npm/v/react-gpt.svg?style=flat-square)](https://www.npmjs.org/package/@atmedia/react-gpt)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#pull-requests)
 
 A [React](https://github.com/facebook/react) component for [Google Publisher Tags](https://developers.google.com/doubleclick-gpt/?hl=en).
@@ -121,7 +118,7 @@ class Application extends React.Component {
 
 1. Clone this repo
 2. Run `yarn`
-3. Run `npm run examples` for client side rendering, `npm start` for server side rendering.
+3. Run `yarn run examples` for client side rendering, `yarn start` for server side rendering.
 4. Point your browser to http://localhost:8080
 
 ## Contributing to this project

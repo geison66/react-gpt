@@ -25,19 +25,19 @@ Here are some guidelines to making changes and preparing your PR:
 
 1. Make your proposed changes to the repository, along with updating/adding test cases.
 2. (Optional) If you prefer to also test your changes in a real application, you can do the following:
-  1. Run `npm link` in `react-gpt` repository.
-  2. `cd` to your favorite React application, run `npm link react-gpt` to point to your local repository.
-  3. Run your application to verify your changes.
-3. Run `npm test` to verify all test cases pass.
-4. Run `npm run lint` to verify there are no linting errors.
+  1. Run `yarn link` in `react-gpt` repository.
+  2. Run `yarn build`
+  3. `cd` to your favorite React application, run `yarn link @atmedia/react-gpt` to point to your local repository.
+  4. Run your application to verify your changes. Note, if you are using Next.js or Webpack you might need to clear the webpack cache after making changes, e.g. by running `rm -rf .next/cache/webpack.
+3. Run `yarn test` to verify all test cases pass.
+4. Run `yarn run lint` to verify there are no linting errors.
 
 <a name="travis-ci-build"></a>
 ## Travis CI Build
-Travis CI build will test your PR before it is merged. Browser testing may not run on Travis for PR, so please test your PR with supported browsers locally before submitting PR.
+
+N/A
 
 <a name="cla"></a>
 ## Contributor License Agreement (CLA)
 
-In order for your pull requests to be accepted, you must accept the [NFL Indivudal Contributor License Agreement](https://cla.nfl.com/agreements/nfl/react-gpt).
-
-Corporate contributors can email engineers@nfl.com and request the **Corporate CLA** which can be signed digitally.
+N/A
