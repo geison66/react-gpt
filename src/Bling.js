@@ -237,7 +237,7 @@ class Bling extends Component {
         /**
          * An optional string for GPT seed file url to override.
          */
-        seedFileUrl: "//www.googletagservices.com/tag/js/gpt.js",
+        seedFileUrl: "https://securepubads.g.doubleclick.net/tag/js/gpt.js",
         /**
          * An optional flag to indicate whether an ad should only render when it's fully in the viewport area. Default is `true`.
          */
@@ -406,7 +406,7 @@ class Bling extends Component {
             .catch(this.onScriptError.bind(this));
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         const {propsEqual} = Bling._config;
         const {sizeMapping} = this.props;
         if (

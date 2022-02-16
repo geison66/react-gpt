@@ -72,7 +72,7 @@ class AppContainer extends Component {
         routeComponent: this.routes["/Travel/Europe"].component
     };
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.unlisten = this.history.listen(location => {
             const route =
                 this.routes[location.pathname] || this.routes["/Travel/Europe"];
