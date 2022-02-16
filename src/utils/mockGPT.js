@@ -217,9 +217,7 @@ class GPTMock {
         return this.version;
     }
     enableServices() {
-        setTimeout(() => {
-            this.pubadsReady = true;
-        }, 0);
+        this.pubadsReady = true;
     }
     sizeMapping() {
         if (!this.sizeMappingBuilder) {
