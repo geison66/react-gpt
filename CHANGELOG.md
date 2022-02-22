@@ -1,3 +1,12 @@
+<a name="2.1.2"></a>
+## [2.1.2](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.1...v2.1.2) (2022-02-22)
+
+* Prefix deprecated React lifecyle methods with `UNSAFE` ([#20](https://github.com/apartmenttherapy/react-gpt/pull/20))
+* Use `securepubads.g.doubleclick.net` instead of `www.googletagservices.com` ([#20](https://github.com/apartmenttherapy/react-gpt/pull/20))
+* Minor documentation updates ([#21](https://github.com/apartmenttherapy/react-gpt/pull/21))
+* Fix tests ([#22](https://github.com/apartmenttherapy/react-gpt/pull/22))
+
+
 <a name="2.1.1"></a>
 ## [2.1.1](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.0...v2.1.1) (2019-02-05)
 
