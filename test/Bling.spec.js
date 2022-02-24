@@ -487,13 +487,7 @@ describe("Bling", () => {
     });
 
     it("renders static ad", done => {
-        const content = `<a href="www.mydestinationsite.com"><img src="www.mysite.com/img.png"></img></a>`;
-
-        Bling.once(Events.RENDER, () => {
-            const adSlot = instance.adSlot;
-            expect(adSlot._content).to.equal(content);
-            done();
-        });
+        const content = `<a href="www.mydestinationsite.com"><img src="www.mysite.com/img.png"></a>`;
 
         const instance = ReactTestUtils.renderIntoDocument(
             <Bling
@@ -502,6 +496,20 @@ describe("Bling", () => {
                 slotSize={[300, 250]}
             />
         );
+
+        sinon
+            .stub(document, "getElementById")
+            .returns(
+                ReactTestUtils.findRenderedDOMComponentWithTag(instance, "div")
+            );
+
+        Bling.once(Events.RENDER, () => {
+            expect(
+                ReactTestUtils.findRenderedDOMComponentWithTag(instance, "div")
+                    .innerHTML
+            ).to.equal(content);
+            done();
+        });
     });
 
     it("does not render ad when renderWhenViewable prop is set to true and the component is not in viewport", done => {

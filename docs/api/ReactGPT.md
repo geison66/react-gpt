@@ -15,7 +15,7 @@ A React component which renders [GPT](https://support.google.com/dfp_sb/answer/1
 *   `sizeMapping`(optional) - An optional array of object which contains an array of viewport size and slot size. This needs to be set if the ad needs to serve different ad sizes per different viewport sizes (responsive ad). Setting the `slot` to any dimension that's not configured in DFP results in rendering an empty ad. The ad slot size which is provided for the viewport size of [0, 0] will be used as default ad size if none of viewport size matches.
 *   `outOfPage`(optional) - An optional flag to indicate whether an ad slot should be out-of-page slot.
 *   `companionAdService`(optional) - An optional flag to indicate whether companion ad service should be enabled for the ad. If an object is passed, it takes as a configuration expecting `enableSyncLoading` or `refreshUnfilledSlots`.
-*   `content`(optional) - An optional HTML content for the slot. If specified, the ad will render with the HTML content using content service.
+*   `content`(optional) - An optional HTML content for the slot. If specified, the ad will render with the HTML content using `innerHTML`.
 *   `clickUrl`(optional) - An optional click through URL. If specified, any landing page URL associated with the creative that is served is overridden.
 *   `categoryExclusion`(optional) - An optional string or an array of string which specifies a page-level ad category exclusion for the given label name.
 *   `attributes`(optional) - An optional map of key-value pairs for an AdSense attribute on a particular ad slot. see [the list of supported key value](https://developers.google.com/doubleclick-gpt/adsense_attributes#adsense_parameters.googletag.Slot)
