@@ -639,10 +639,12 @@ class Bling extends Component {
         const slotSize = this.getSlotSize();
 
         if (!this._adSlot) {
+            // May need additional OOP logic later
             if (outOfPage) {
                 this._adSlot = Bling._adManager.googletag.defineOutOfPageSlot(
                     adUnitPath,
-                    divId
+                    Bling._adManager.googletag.enums.OutOfPageFormat
+                        .INTERSTITIAL
                 );
             } else {
                 this._adSlot = Bling._adManager.googletag.defineSlot(
@@ -732,7 +734,9 @@ class Bling extends Component {
             ) {
                 Bling._adManager.updateCorrelator();
             }
-            Bling._adManager.googletag.display(divId);
+            if (!this.props.outOfPage) {
+                Bling._adManager.googletag.display(divId);
+            }
             if (
                 Bling._adManager._disableInitialLoad &&
                 !Bling._adManager._initialRender
@@ -797,6 +801,10 @@ class Bling extends Component {
             this._adSlot = null;
         }
         this._divId = id || Bling._adManager.generateDivId();
+
+        if (this.props.outOfPage) {
+            return null;
+        }
 
         return <div id={this._divId} style={style} />;
     }
