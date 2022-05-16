@@ -1,3 +1,8 @@
+<a name="2.1.5"></a>
+## [2.1.5](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.4...v2.1.5) (2022-05-16)
+
+* negative viewable threshold ([28] (https://github.com/apartmenttherapy/react-gpt/pull/28))
+
 <a name="2.1.4"></a>
 ## [2.1.4](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.3...v2.1.4) (2022-05-03)
 
