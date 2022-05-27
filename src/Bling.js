@@ -551,7 +551,13 @@ class Bling extends Component {
             slotSize,
             this.viewableThreshold
         );
-        if (inViewport) {
+
+        const isHidden = () => {
+            const el = ReactDOM.findDOMNode(this);
+            return el.offsetParent === null || el.style.display === "none";
+        };
+
+        if (inViewport && !isHidden()) {
             this.setState({inViewport: true});
         }
     }
