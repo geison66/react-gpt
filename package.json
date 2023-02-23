@@ -116,7 +116,8 @@
         "prepublish":
             "npm run build && npm run build:es && npm run build:umd && npm run build:umd:min",
         "test": "npm run lint && karma start",
-        "update-apilist": "node ./scripts/updateAPIList.js"
+        "update-apilist": "node ./scripts/updateAPIList.js",
+        "prepare": "npm run build"
     },
     "config": {
         "commitizen": {
