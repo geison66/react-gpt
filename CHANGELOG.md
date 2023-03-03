@@ -1,3 +1,9 @@
+<a name="2.1.8"></a>
+## [2.1.8](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.7...v2.1.8) (2023-03-03)
+
+* remove console log ([34] (https://github.com/apartmenttherapy/react-gpt/pull/34))
+
+
 <a name="2.1.7"></a>
 ## [2.1.7](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.6...v2.1.7) (2023-03-03)
 
