@@ -1,3 +1,8 @@
+<a name="2.1.7"></a>
+## [2.1.7](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.6...v2.1.7) (2023-03-03)
+
+* update to React 17 ([32] (https://github.com/apartmenttherapy/react-gpt/pull/32))
+
 <a name="2.1.6"></a>
 ## [2.1.6](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.5...v2.1.6) (2022-05-27)
 
