@@ -1,3 +1,8 @@
+<a name="2.1.9"></a>
+## [2.1.9](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.8...v2.1.9) (2023-05-10)
+
+* disable viwability threshold check if lazyloading ([36] (https://github.com/apartmenttherapy/react-gpt/pull/36))
+
 <a name="2.1.8"></a>
 ## [2.1.8](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.7...v2.1.8) (2023-03-03)
 

@@ -151,6 +151,7 @@ class Bling extends React.Component {
         onImpressionViewable: PropTypes.func,
         /**
          * An optional event handler function for `googletag.events.slotVisibilityChangedEvent`.
+         * Note that this is independent of the isSlotInView function
          *
          * @property onSlotVisibilityChanged
          */
@@ -174,6 +175,10 @@ class Bling extends React.Component {
          * @property viewableThreshold
          */
         viewableThreshold: PropTypes.number,
+        /**
+         * Skip isInViewport check if true.
+         */
+        doNotUseViewableThreshold: PropTypes.bool,
         /**
          * An optional call back function to notify when the script is loaded.
          *
@@ -241,6 +246,10 @@ class Bling extends React.Component {
          * An optional flag to indicate whether an ad should only render when it's fully in the viewport area. Default is `true`.
          */
         renderWhenViewable: true,
+        /**
+         * If true skip isInViewport check.
+         */
+        doNotUseViewableThreshold: false,
         /**
          * An optional number to indicate how much percentage of an ad area needs to be in a viewable area before rendering. Default value is 0.5.
          * Acceptable range is between 0 and 1.
@@ -640,7 +649,10 @@ class Bling extends React.Component {
 
     notInViewport(props = this.props, state = this.state) {
         const {inViewport} = state;
-        return this.getRenderWhenViewable(props) && !inViewport;
+        return (
+            this.getRenderWhenViewable(props) &&
+            (!props.doNotUseViewableThreshold && !inViewport)
+        );
     }
 
     defineSlot() {

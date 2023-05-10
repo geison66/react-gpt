@@ -27,7 +27,8 @@ export const pubadsAPI = [
     "setTagForChildDirectedTreatment",
     "clearTagForChildDirectedTreatment",
     "setVideoContent",
-    "setForceSafeFrame"
+    "setForceSafeFrame",
+    "enableLazyLoad"
 ];
 
 export const APIToCallBeforeServiceEnabled = [
@@ -36,7 +37,8 @@ export const APIToCallBeforeServiceEnabled = [
     "enableSyncRendering",
     "disableInitialLoad",
     "collapseEmptyDivs",
-    "setCentering"
+    "setCentering",
+    "enableLazyLoad"
 ];
 
 export class AdManager extends EventEmitter {
