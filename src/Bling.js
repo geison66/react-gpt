@@ -196,7 +196,17 @@ class Bling extends React.Component {
          *
          * @property style
          */
-        style: PropTypes.object
+        style: PropTypes.object,
+        /**
+         * An optional property to control non-personalized Ads.
+         * https://support.google.com/admanager/answer/7678538
+         *
+         * Set to `true` to mark the ad request as NPA, and to `false` for ad requests that are eligible for personalized ads
+         * It is `false` by default, according to Google's definition.
+         *
+         * @property npa
+         */
+        npa: PropTypes.bool
     };
 
     /**
@@ -222,7 +232,13 @@ class Bling extends React.Component {
      * @property reRenderProps
      * @static
      */
-    static reRenderProps = ["adUnitPath", "slotSize", "outOfPage", "content"];
+    static reRenderProps = [
+        "adUnitPath",
+        "slotSize",
+        "outOfPage",
+        "content",
+        "npa"
+    ];
     /**
      * An instance of ad manager.
      *
@@ -456,10 +472,9 @@ class Bling extends React.Component {
             this.props,
             nextProps
         );
-        const shouldRender = !propsEqual(
-            reRenderProps.props,
-            reRenderProps.nextProps
-        );
+        const shouldRender =
+            !this._adSlot ||
+            !propsEqual(reRenderProps.props, reRenderProps.nextProps);
         const shouldRefresh =
             !shouldRender &&
             !propsEqual(refreshableProps.props, refreshableProps.nextProps);
@@ -656,9 +671,11 @@ class Bling extends React.Component {
     }
 
     defineSlot() {
-        const {adUnitPath, outOfPage} = this.props;
+        const { adUnitPath, outOfPage, npa } = this.props;
         const divId = this._divId;
         const slotSize = this.getSlotSize();
+
+        this.handleSetNpaFlag(npa);
 
         if (!this._adSlot) {
             // May need additional OOP logic later
@@ -829,6 +846,24 @@ class Bling extends React.Component {
         }
 
         return <div id={this._divId} style={style} />;
+    }
+
+    /**
+     * Call pubads and set the non-personalized Ads flag, if it is not undefined.
+     *
+     * @param {boolean} npa
+     */
+    handleSetNpaFlag(npa) {
+        if (npa === undefined) {
+            return;
+        }
+
+        Bling._adManager.pubadsProxy({
+            method: "setRequestNonPersonalizedAds",
+            args: [npa ? 1 : 0],
+            resolve: null,
+            reject: null
+        });
     }
 }
 
