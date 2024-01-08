@@ -1,3 +1,8 @@
+<a name="2.1.10"></a>
+## [2.1.10](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.8...v2.1.10) (2024-01-08)
+
+* Merge NFL Master in ([38] (https://github.com/apartmenttherapy/react-gpt/pull/38))
+
 <a name="2.1.9"></a>
 ## [2.1.9](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.8...v2.1.9) (2023-05-10)
 
