@@ -13,7 +13,6 @@
 
 * remove console log ([34] (https://github.com/apartmenttherapy/react-gpt/pull/34))
 
-
 <a name="2.1.7"></a>
 ## [2.1.7](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.6...v2.1.7) (2023-03-03)
 
@@ -24,7 +23,6 @@
 
 * negative viewable threshold update ([30] (https://github.com/apartmenttherapy/react-gpt/pull/30))
 
-
 <a name="2.1.5"></a>
 ## [2.1.5](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.4...v2.1.5) (2022-05-16)
 
@@ -32,8 +30,6 @@
 
 <a name="2.1.4"></a>
 ## [2.1.4](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.3...v2.1.4) (2022-05-03)
-
-
 
 <a name="2.1.3"></a>
 ## [2.1.3](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.2...v2.1.3) (2022-02-24)
