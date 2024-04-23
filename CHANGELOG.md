@@ -1,3 +1,8 @@
+<a name="2.1.11"></a>
+## [2.1.11](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.10...v2.1.11) (2024-04-23)
+
+* Remove NEG VT updates in ([40] (https://github.com/apartmenttherapy/react-gpt/pull/40))
+
 <a name="2.1.10"></a>
 ## [2.1.10](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.8...v2.1.10) (2024-01-08)
 
