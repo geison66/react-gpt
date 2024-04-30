@@ -1,3 +1,8 @@
+<a name="2.1.12"></a>
+## [2.1.12](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.11...v2.1.12) (2024-04-30)
+
+* Fix issue NEG VT updates that broke SRA in ([42] https://github.com/apartmenttherapy/react-gpt/pull/42))
+
 <a name="2.1.11"></a>
 ## [2.1.11](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.10...v2.1.11) (2024-04-23)
 
