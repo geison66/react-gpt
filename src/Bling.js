@@ -656,7 +656,7 @@ class Bling extends React.Component {
 
     notInViewport(props = this.props, state = this.state) {
         const {inViewport} = state;
-        return this.getRenderWhenViewable(props) && !inViewport;
+        return this.getRenderWhenViewable(props) && (false && !inViewport);
     }
 
     defineSlot() {
