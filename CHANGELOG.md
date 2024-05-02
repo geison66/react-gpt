@@ -1,3 +1,8 @@
+<a name="2.1.14"></a>
+## [2.1.14](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.13...v2.1.14) (2024-05-02)
+
+* Slim it down even more ([46] https://github.com/apartmenttherapy/react-gpt/pull/46))
+
 <a name="2.1.13"></a>
 ## [2.1.13](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.12...v2.1.13) (2024-05-02)
 
