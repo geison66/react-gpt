@@ -1,3 +1,8 @@
+<a name="2.1.15"></a>
+## [2.1.15](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.14...v2.1.15) (2024-05-02)
+
+* fix issue ([48] https://github.com/apartmenttherapy/react-gpt/pull/48))
+
 <a name="2.1.14"></a>
 ## [2.1.14](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.13...v2.1.14) (2024-05-02)
 
