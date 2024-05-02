@@ -5,8 +5,7 @@ import {debounce} from "throttle-debounce";
 import invariant from "invariant";
 import deepEqual from "deep-equal";
 import hoistStatics from "hoist-non-react-statics";
-import Events from "./Events";
-import filterPropsSimple from "./utils/filterProps";
+import {Events, filterProps} from "./oneFile";
 import {createManager, pubadsAPI} from "./createManager";
 /**
  * An Ad Component using Google Publisher Tags.
@@ -266,7 +265,7 @@ class Bling extends React.Component {
         /**
          * An optional function to create an object with filtered current props and next props for a given keys to perform equality check.
          */
-        filterProps: filterPropsSimple,
+        filterProps,
         /**
          * An optional function for the filtered props and the next props to perform equality check.
          */
@@ -453,7 +452,7 @@ class Bling extends React.Component {
             return true;
         }
 
-        const {filterProps, propsEqual} = Bling._config;
+        const {propsEqual} = Bling._config;
         const refreshableProps = filterProps(
             Bling.refreshableProps,
             this.props,

@@ -1,4 +1,27 @@
-export default function isInViewport(el, [width, height] = [0, 0], offset = 0) {
+export const Events = {
+    READY: "ready",
+    RENDER: "render",
+    SLOT_RENDER_ENDED: "slotRenderEnded",
+    IMPRESSION_VIEWABLE: "impressionViewable",
+    SLOT_VISIBILITY_CHANGED: "slotVisibilityChanged",
+    SLOT_LOADED: "slotOnload"
+};
+
+export function filterProps(propKeys, props, nextProps) {
+    return propKeys.reduce(
+        (filtered, key) => {
+            filtered.props[key] = props[key];
+            filtered.nextProps[key] = nextProps[key];
+            return filtered;
+        },
+        {
+            props: {},
+            nextProps: {}
+        }
+    );
+}
+
+export function isInViewport(el, [width, height] = [0, 0], offset = 0) {
     if (!el || el.nodeType !== 1) {
         return false;
     }
