@@ -1,22 +1,27 @@
+<a name="2.1.16"></a>
+## [2.1.16](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.15...v2.1.16) (2024-05-03)
+
+* removed unused packages ([49] (https://github.com/apartmenttherapy/react-gpt/pull/49)
+
 <a name="2.1.15"></a>
 ## [2.1.15](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.14...v2.1.15) (2024-05-02)
 
-* fix issue ([48] https://github.com/apartmenttherapy/react-gpt/pull/48))
+* fix issue ([48] (https://github.com/apartmenttherapy/react-gpt/pull/48))
 
 <a name="2.1.14"></a>
 ## [2.1.14](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.13...v2.1.14) (2024-05-02)
 
-* Slim it down even more ([46] https://github.com/apartmenttherapy/react-gpt/pull/46))
+* Slim it down even more ([46] (https://github.com/apartmenttherapy/react-gpt/pull/46))
 
 <a name="2.1.13"></a>
 ## [2.1.13](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.12...v2.1.13) (2024-05-02)
 
-* Slim it down ([44] https://github.com/apartmenttherapy/react-gpt/pull/44))
+* Slim it down ([44] (https://github.com/apartmenttherapy/react-gpt/pull/44))
 
 <a name="2.1.12"></a>
 ## [2.1.12](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.11...v2.1.12) (2024-04-30)
 
-* Fix issue NEG VT updates that broke SRA in ([42] https://github.com/apartmenttherapy/react-gpt/pull/42))
+* Fix issue NEG VT updates that broke SRA in ([42] (https://github.com/apartmenttherapy/react-gpt/pull/42))
 
 <a name="2.1.11"></a>
 ## [2.1.11](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.10...v2.1.11) (2024-04-23)
