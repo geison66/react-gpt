@@ -43,10 +43,6 @@ export const APIToCallBeforeServiceEnabled = [
 export class AdManager extends EventEmitter {
     constructor(config = {}) {
         super(config);
-
-        if (config.test) {
-            this.testMode = config;
-        }
     }
 
     _config = {
@@ -61,8 +57,6 @@ export class AdManager extends EventEmitter {
     _initialRender = true;
 
     _syncCorrelator = false;
-
-    _testMode = false;
 
     get googletag() {
         return this._googletag;
@@ -82,27 +76,6 @@ export class AdManager extends EventEmitter {
 
     get pubadsReady() {
         return this.googletag && this.googletag.pubadsReady;
-    }
-
-    get testMode() {
-        return this._testMode;
-    }
-
-    set testMode(config) {
-        if (process.env.NODE_ENV === "production") {
-            return;
-        }
-        const {test, GPTMock} = config;
-        this._isLoaded = true;
-        this._testMode = !!test;
-
-        if (test) {
-            invariant(
-                test && GPTMock,
-                "Must provide GPTMock to enable testMode. config{GPTMock}"
-            );
-            this._googletag = new GPTMock(config);
-        }
     }
 
     _processPubadsQueue() {
@@ -159,10 +132,6 @@ export class AdManager extends EventEmitter {
                 instance.foldCheck(event);
             }
         });
-
-        if (this.testMode) {
-            this._getTimer();
-        }
     });
 
     _getTimer() {
@@ -488,11 +457,6 @@ export class AdManager extends EventEmitter {
         return (
             this._loadPromise ||
             (this._loadPromise = new Promise((resolve, reject) => {
-                // test mode can't be enabled in production mode
-                if (this.testMode) {
-                    resolve(this.googletag);
-                    return;
-                }
                 if (!canUseDOM) {
                     reject(new Error("DOM not available"));
                     return;
