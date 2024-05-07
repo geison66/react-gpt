@@ -1,7 +1,12 @@
+<a name="2.1.17"></a>
+## [2.1.17](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.16...v2.1.17) (2024-05-07)
+
+* remove test mode ([51] https://github.com/apartmenttherapy/react-gpt/pull/51))
+
 <a name="2.1.16"></a>
 ## [2.1.16](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.15...v2.1.16) (2024-05-03)
 
-* removed unused packages ([49] (https://github.com/apartmenttherapy/react-gpt/pull/49)
+* removed unused packages ([49] (https://github.com/apartmenttherapy/react-gpt/pull/49))
 
 <a name="2.1.15"></a>
 ## [2.1.15](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.14...v2.1.15) (2024-05-02)
