@@ -2,7 +2,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import {debounce} from "throttle-debounce";
-import invariant from "invariant";
 import deepEqual from "deep-equal";
 import hoistStatics from "hoist-non-react-statics";
 import {Events, filterProps} from "./oneFile";
@@ -191,17 +190,7 @@ class Bling extends React.Component {
          *
          * @property style
          */
-        style: PropTypes.object,
-        /**
-         * An optional property to control non-personalized Ads.
-         * https://support.google.com/admanager/answer/7678538
-         *
-         * Set to `true` to mark the ad request as NPA, and to `false` for ad requests that are eligible for personalized ads
-         * It is `false` by default, according to Google's definition.
-         *
-         * @property npa
-         */
-        npa: PropTypes.bool
+        style: PropTypes.object
     };
 
     /**
@@ -227,13 +216,7 @@ class Bling extends React.Component {
      * @property reRenderProps
      * @static
      */
-    static reRenderProps = [
-        "adUnitPath",
-        "slotSize",
-        "outOfPage",
-        "content",
-        "npa"
-    ];
+    static reRenderProps = ["adUnitPath", "slotSize", "outOfPage", "content"];
     /**
      * An instance of ad manager.
      *
@@ -387,11 +370,6 @@ class Bling extends React.Component {
      */
     static updateCorrelator() {
         Bling._adManager.updateCorrelator();
-    }
-
-    static set testManager(testManager) {
-        invariant(testManager, "Pass in createManagerTest to mock GPT");
-        Bling._adManager = testManager;
     }
 
     state = {
@@ -659,11 +637,9 @@ class Bling extends React.Component {
     }
 
     defineSlot() {
-        const {adUnitPath, outOfPage, npa} = this.props;
+        const {adUnitPath, outOfPage} = this.props;
         const divId = this._divId;
         const slotSize = this.getSlotSize();
-
-        this.handleSetNpaFlag(npa);
 
         if (!this._adSlot) {
             // May need additional OOP logic later
@@ -790,18 +766,11 @@ class Bling extends React.Component {
 
     render() {
         const {scriptLoaded} = this.state;
-        const {id, outOfPage, style} = this.props;
+        const {id, style} = this.props;
         const shouldNotRender = this.notInViewport(this.props, this.state);
 
         if (!scriptLoaded || shouldNotRender) {
             let slotSize = this.getSlotSize();
-
-            if (!outOfPage) {
-                invariant(
-                    slotSize,
-                    "Either 'slotSize' or 'sizeMapping' prop needs to be set."
-                );
-            }
 
             if (Array.isArray(slotSize) && Array.isArray(slotSize[0])) {
                 slotSize = slotSize[0];
@@ -834,24 +803,6 @@ class Bling extends React.Component {
         }
 
         return <div id={this._divId} style={style} />;
-    }
-
-    /**
-     * Call pubads and set the non-personalized Ads flag, if it is not undefined.
-     *
-     * @param {boolean} npa
-     */
-    handleSetNpaFlag(npa) {
-        if (npa === undefined) {
-            return;
-        }
-
-        Bling._adManager.pubadsProxy({
-            method: "setRequestNonPersonalizedAds",
-            args: [npa ? 1 : 0],
-            resolve: null,
-            reject: null
-        });
     }
 }
 

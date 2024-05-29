@@ -48,7 +48,6 @@ Only `adUnitPath` is a required prop, but either `slotSize` or `sizeMapping` nee
 *   `refresh([slots, options])` - Refreshes the ad specified by an array of slot. If slots are not specified, it will refresh all ads. See [here](https://developers.google.com/doubleclick-gpt/reference#googletag.PubAdsService_refresh) for more details.
 *   `clear([slots])` - Clears the ad specifid by an array of slot. If slots are not specified, it will clear all ads. See [here](https://developers.google.com/doubleclick-gpt/reference#googletagpubadsservice) for more details.
 *   `updateCorrelator` - Updates the correlator value that's sent with ad requests. See [here](https://developers.google.com/doubleclick-gpt/reference#googletag.PubAdsService_updateCorrelator) for more details.
-*   `createTestManager` - Creates a test ad manager to use mocked GPT for unit testing.
 
 In addition to the defined static methods above, all the supported Pubads API are exposed as static methods, too.
 The list of the supported API are maintained [here](https://github.com/nfl/react-gpt/blob/master/src/createManager.js#L9) and updated based on the [GPT API Reference](https://developers.google.com/doubleclick-gpt/reference).

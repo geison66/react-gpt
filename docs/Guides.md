@@ -73,22 +73,3 @@ The mock file is used for unit test and potentially catches the breaking changes
 
 There are often cases where undocumented APIs are added to the `gpt.js`, but we will not support those unless it's [officially documented](https://developers.google.com/doubleclick-gpt/reference).
 
-## Test Mode
-
-GPT ad uses iframe to render an ad most of the times and it often fails to render ads within the unit test which itself uses iframe in some unit test libraries such as [karma](https://github.com/karma-runner/karma).
-React GPT offers the test mode where it uses the mock GPT instead of requesting `gpt.js`.
-
-Here is an example of how to use the test mode in your unit test using [mocha](https://github.com/mochajs/mocha).
-
-```js
-import {Bling as GPT} from "react-gpt";
-
-describe("My module", () => {
-    beforeEach(() => {
-        // create a fresh ad manager with test mode for every test.
-        GPT.createTestManager();
-    });
-
-    // your test goes here.
-});
-```
