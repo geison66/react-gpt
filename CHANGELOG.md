@@ -1,3 +1,8 @@
+<a name="2.1.18"></a>
+## [2.1.18](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.17...v2.1.18) (2024-05-29)
+
+* remove more packages and code ([53] https://github.com/apartmenttherapy/react-gpt/pull/53))
+
 <a name="2.1.17"></a>
 ## [2.1.17](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.16...v2.1.17) (2024-05-07)
 
