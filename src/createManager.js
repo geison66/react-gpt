@@ -402,7 +402,7 @@ export class AdManager extends EventEmitter {
         const instances = this.getMountedInstances();
         instances.forEach((instance, i) => {
             if (i === 0) {
-                this.updateCorrelator();
+                this.googletag.destroySlots();
             }
             instance.forceUpdate();
         });
@@ -431,9 +431,11 @@ export class AdManager extends EventEmitter {
         // Note, `updateCorrelator` has been deprecated. This is a short-term patch
         // to ensure the method will not be called when it is removed from GPT.
         // A better fix to come...
-        if ("updateCorrelator" in this.googletag.pubads()) {
-            this.googletag.pubads().updateCorrelator();
-        }
+
+        // Deprecated
+        // if ("updateCorrelator" in this.googletag.pubads()) {
+        //    this.googletag.pubads().updateCorrelator();
+        // }
         return true;
     }
 
