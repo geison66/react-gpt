@@ -1,3 +1,9 @@
+<a name="2.1.20"></a>
+
+## 2.1.20 (2025-03-04)
+
+-   fix deprecated updateCorrelator
+
 <a name="2.1.19"></a>
 
 ## [2.1.19](https://github.com/apartmenttherapy/react-gpt/compare/v2.1.18...v2.1.19) (2024-05-30)
