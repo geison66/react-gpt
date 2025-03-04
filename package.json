@@ -1,5 +1,5 @@
 {
-    "name": "@geison66/react-gpt",
+    "name": "@draft5/react-gpt",
     "version": "2.1.20",
     "description": "A react display ad component using Google Publisher Tag",
     "main": "lib/index.js",
